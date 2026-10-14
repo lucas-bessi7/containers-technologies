@@ -50,7 +50,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:${{ steps.tag.outputs.image_tag }}" .
       - name: Trivy | Vulnerability scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.28.0
         with:
           image-ref: '${{ secrets.DOCKERHUB_USERNAME }}/containers-technologies:${{ steps.tag.outputs.image_tag }}'
           format: table

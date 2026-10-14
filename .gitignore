@@ -1,1 +1,8 @@
 **/.DS_Store
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+plan.json
+**/__pycache__/
+.venv/
